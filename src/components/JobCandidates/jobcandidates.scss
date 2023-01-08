@@ -1,0 +1,70 @@
+// $maincolor1: #111111;
+// $maincolor2: #f0f0f0;
+// $maincolor3: #ffffff;
+// $maincolor4: #777777;
+
+$maincolor1: #f3486a;
+$maincolor2: #271964;
+$maincolor3: #f0f0f0;
+$maincolor4: #ffffff;
+$maincolor5: #777777;
+
+.jobcandidates{
+    width: 80%;
+    margin: 3rem auto;
+    font-family: "Poppins", sans-serif;
+    &_jobdetails {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        &_box{
+            width: 20%;
+            // background-color: $maincolor1;
+            margin: 0 0.5rem;
+            padding: 0.7rem;
+            border-radius: 0.5rem;
+            color: $maincolor2;
+            box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+            h3{
+                margin: 0;
+                font-weight: 700;
+                font-size: 1.3rem;
+            }
+            h4{
+                margin: 0;
+                font-weight: 500;
+            }
+        }
+    }
+    &_list{
+        margin-top: 5rem;
+        table{
+            margin: 2rem auto;
+            width: 100%;
+            border: 1px solid $maincolor5;
+            text-align: left;
+            border-radius: 1rem;
+            th{
+                border-bottom: 1px solid $maincolor5;
+                background-color: $maincolor1;
+                padding: 1rem;
+                color: $maincolor4;
+            }
+            th:first-child{
+                border-top-left-radius: 1rem;
+            }
+            th:last-child{
+                border-top-right-radius: 1rem;
+            }
+            td{
+                border-bottom: 1px solid $maincolor5;
+                padding: 1rem;
+                color: $maincolor2;
+                font-weight: 500;
+            }
+            tr:last-child > td{
+                border-bottom: none;
+            }
+        }
+    }
+}

@@ -1,0 +1,102 @@
+$maincolor1: #f3486a;
+$maincolor2: #271964;
+$maincolor3: #f0f0f0;
+$maincolor4: #ffffff;
+$maincolor5: #d3d3d3;
+
+.auth{
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    margin-top: 8rem;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+    width: 450px;
+    font-family: "Poppins", sans-serif;
+    border-radius: 1rem;
+
+    &_options{
+        display: flex;
+        justify-content: space-around;
+        // box-shadow: 0 0px 4px rgba(0, 0, 0, 0.5);
+        border-top-left-radius: 1rem;
+        border-top-right-radius: 1rem;
+        h3{
+            margin: 0;
+            width: 50%;
+            text-align: center;
+            padding: 1rem;
+            cursor: pointer;
+            font-weight: 600;
+            &:nth-child(1){
+                border-top-left-radius: 1rem;
+            }
+            &:nth-child(2){
+                border-top-right-radius: 1rem;
+            }
+        }
+    }
+
+    &_bottom{
+        display: flex;
+        flex-direction: column;
+        margin-top: 2rem;
+        padding: 1.5rem 2rem;
+        &_input {
+            display: flex;
+            align-items: center;
+            padding: 0.3rem 0.6rem;
+            border-radius: 0.5rem;
+            border: 1px solid $maincolor5;
+            margin-bottom: 1rem;
+            font-family: "Poppins", sans-serif;
+            transition: all 0.5s;
+            span {
+                margin-right: 1rem;
+                padding-right: 1rem;
+                border-right: 1px solid $maincolor5;
+            }
+            & input {
+                width: 90%;
+                outline: none;
+                padding: 0.5rem 0;
+                font-family: "Poppins", sans-serif;
+                border: none;
+            }
+        }
+        // & input{
+        //     padding: 0.7rem 1rem;
+        //     border-radius: 0.5rem;
+        //     border: 1px solid $maincolor2;
+        //     outline: none;
+        //     margin-bottom: 1rem;
+        //     font-family: "Poppins", sans-serif;
+        //     transition: all 0.5s;
+        //     &:focus{
+        //         border: 1px solid $maincolor1;
+        //     }
+        // }
+        p{
+            font-size: 0.8rem;
+            text-align: center;
+            margin: 0;
+            color: $maincolor1;
+        }
+        & button{
+            padding: 0.7rem 1rem;
+            border-radius: 0.5rem;
+            background-color: $maincolor1;
+            color: $maincolor3;
+            font-weight: 500;
+            outline: none;
+            margin-bottom: 1rem;
+            font-family: "Poppins", sans-serif;
+            margin-top: 1rem;
+            cursor: pointer;
+            border: none;
+        }
+        &_active{
+            background-color: $maincolor1;
+            color: $maincolor4;
+        }
+    }
+}

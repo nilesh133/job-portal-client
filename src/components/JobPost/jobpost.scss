@@ -1,0 +1,70 @@
+$maincolor1: #f3486a;
+$maincolor2: #271964;
+$maincolor3: #f0f0f0;
+$maincolor4: #ffffff;
+$maincolor5: #777777;
+
+.jobpost {
+    display: flex;
+    flex-direction: column;
+    margin: 4rem auto;
+    width: 60%;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+    padding: 2rem;
+    border-radius: 1rem;
+    font-family: "Poppins", sans-serif;
+    &_inputcontainer{
+        width: 90%;
+        margin-bottom: 3rem;
+        h4{
+            font-size: 1.2rem;
+            margin: 0;
+            margin-bottom: 0.5rem;
+            color: $maincolor2;
+        }
+        input, select, textarea{
+            width: 90%;
+            padding: 0.7rem 1rem;
+            border-radius: 0.5rem;
+            border: 1px solid $maincolor5;
+            outline: none;
+            margin-bottom: 0.3rem;
+            font-family: "Poppins", sans-serif;
+            transition: all 0.5s;
+            &:focus{
+                border: 1px solid $maincolor1;
+            }
+        }
+        &_addresponsibility{
+           font-size: 1.8rem;
+           cursor: pointer;
+        }
+    }
+    &_halfinputcontainer{
+        display: flex;
+        flex-grow: 1;
+        width: 100%;
+        & > div {
+            width: 50%;
+            h4{
+                font-size: 0.9rem;
+                font-weight: 500;
+                color: $maincolor4;
+            }
+            input{
+                width: 80%;
+            }
+        }  
+    }
+    &_button{
+        font-family: "Poppins", sans-serif;
+        background-color: $maincolor1;
+        color: $maincolor3;
+        width: fit-content;
+        padding: 0.5rem 1.7rem;
+        border-radius: 1rem;
+        margin-top: 1.5rem;
+        cursor: pointer;
+        border: none;
+    }
+}

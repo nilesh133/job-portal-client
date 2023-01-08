@@ -1,0 +1,121 @@
+$maincolor1: #f3486a;
+$maincolor2: #271964;
+$maincolor3: #f0f0f0;
+$maincolor4: #ffffff;
+$maincolor5: #777777;
+
+.usersinglejob{
+    font-family: "Poppins", sans-serif;
+    &_jobprofile{
+        width: 100%;
+        height: 350px;
+        background: rgba(0, 0, 0, 0.8) url("../../images/user-job-apply.png");
+        background-position: center;
+        background-size: cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-blend-mode: darken;
+        h3{
+            text-transform: capitalize;
+            font-size: 2.5rem;
+            color: $maincolor3;
+            font-weight: 400;
+        }
+    }
+    &_details{
+        width: 70%;
+        margin: 4rem auto;
+        display: flex;
+        &_left{
+            width: 65%;
+            &_logo{
+                display: flex;
+                img {
+                    width: 90px;
+                    height: 90px;
+                    object-fit: cover;
+                    border-radius: 0.5rem;
+                }
+                &_info{
+                    margin-left: 2rem;
+                    h4{
+                        font-size: 1.5rem;
+                        margin: 0;
+                        font-weight: 500;
+                        color: $maincolor2;
+                    }
+                    & > div {
+                        display: flex;
+                        margin-top: 0.3rem;
+                        p{
+                            color: $maincolor1;
+                            margin: 0;
+                            margin-right: 3rem;
+                            span {
+                                color: $maincolor1;
+                                font-size: 1em;
+                            }
+                        }
+                    }
+                }
+            }
+            &_desc{
+                margin-top: 4rem;
+                h3{
+                    color: $maincolor2;
+                }
+                p{
+                    margin: 0;
+                    color: $maincolor5;
+                }
+                h4{
+                    margin: 0;
+                    font-weight: 400;
+                    margin-left: 1rem;
+                    color: $maincolor4;
+                }
+            }
+        }
+        &_right{
+            background-color: $maincolor3;
+            width: 35%;
+            padding: 1rem;
+            height: fit-content;
+            margin-left: 4rem;
+            h3{
+                font-size: 1.3rem;
+                color: $maincolor2;
+            }
+            p{
+                color: $maincolor2;
+                font-weight: 500;
+                span{
+                    color: $maincolor1;
+                }
+            }
+            &_disabletrue{
+                font-family: "Poppins", sans-serif;
+                background-color: $maincolor4;
+                pointer-events: none;
+                color: $maincolor3;
+                width: fit-content;
+                padding: 0.5rem 1.7rem;
+                border-radius: 1rem;
+                margin-top: 1.5rem;
+                border: none;
+            }
+            &_disablefalse{
+                font-family: "Poppins", sans-serif;
+                background-color: $maincolor1;
+                color: $maincolor3;
+                width: fit-content;
+                padding: 0.5rem 1.7rem;
+                border-radius: 1rem;
+                margin-top: 1.5rem;
+                cursor: pointer;
+                border: none;
+            }
+        }
+    }
+}

@@ -1,0 +1,76 @@
+$maincolor1: #f3486a;
+$maincolor2: #271964;
+$maincolor3: #f0f0f0;
+$maincolor4: #ffffff;
+$maincolor5: #777777;
+
+.recruiter_dashboard{
+    width: 70%;
+    margin: 3rem auto;
+    font-family: "Poppins", sans-serif;
+    &_analytics {
+        display: flex;
+        justify-content: center;
+        gap: 4rem;
+        &_box{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 25%;
+            border-radius: 0.5rem;
+            padding: 1rem 0;
+            color: $maincolor2;
+            box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+            h3{
+                font-size: 1rem;
+                margin: 0;
+            }
+            h4{
+                font-size: 2.5rem;
+                margin: 0;
+            }
+        }
+    }
+
+    &_jobs{
+        width: 100%;
+        &_box{
+            // border: 1px solid $maincolor2;
+            width: 75%;
+            margin: 2rem auto;
+            padding: 1rem 1.5rem;
+            border-radius: 1rem;
+            box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+            h2{
+                color: $maincolor2;
+            }
+            p{
+                color: $maincolor1;
+                span {
+                    // background-color: $maincolor5;
+                    // padding: 0.3rem;
+                    font-weight: 600;
+                    border-radius: 0.2rem;
+                    color: $maincolor2;
+                }
+            }
+            &_button {
+                display: flex;
+                justify-content: space-between;
+                button {
+                    padding: 0.7rem 1rem;
+                    border-radius: 0.5rem;
+                    background-color: $maincolor1;
+                    color: $maincolor4;
+                    font-weight: 500;
+                    outline: none;
+                    margin-bottom: 1rem;
+                    font-family: "Poppins", sans-serif;
+                    margin-top: 1rem;
+                    cursor: pointer;
+                    border: none;
+                }
+            }
+        }
+    }
+}

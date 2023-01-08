@@ -1,0 +1,61 @@
+$maincolor1: #f3486a;
+$maincolor2: #271964;
+$maincolor3: #f0f0f0;
+$maincolor4: #ffffff;
+
+.home_container{
+    // background-color: $maincolor3;
+    font-family: "Poppins", sans-serif;
+    height: 665px;
+    display: flex;
+    &_left{
+        width: 40%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        h2{
+            font-size: 4rem;
+            font-weight: 500;
+            color: $maincolor2;
+            margin: 0;
+        }
+        button {
+            padding: 0.7rem 1rem;
+            border-radius: 0.5rem;
+            border: 1px solid $maincolor1;
+            outline: none;
+            margin-bottom: 1rem;
+            font-family: "Poppins", sans-serif;
+            transition: all 0.5s;
+            background-color: $maincolor1;
+            color: $maincolor3;
+            cursor: pointer;
+            margin-right: 1rem;
+            margin-top: 1rem;
+        }
+    }
+
+    &_right{
+        width: 60%;
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}
+
+
+// gradients
+// 1. #4facfe --> #00f2fee
+// 2. #209cff --> #68eocf
+// 3. #ff5858 --> #f09819
+// 4. #29323c --> #485563
+// 5. #ed6ea0 --> #ec8c69
+// 6. #1aa37a --> #9dffb3
+// 7. #2f5cff --> #dbf4ff
+// 8. #00b4db --> #0083b0
+// 9. #4b6cb7 --> #182848
+// 10. #5236ff --> #d9edff
+// 11. #06beb6 --> #48b1bf

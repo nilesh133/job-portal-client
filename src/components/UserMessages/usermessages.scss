@@ -1,0 +1,104 @@
+$maincolor1: #f3486a;
+$maincolor2: #271964;
+$maincolor3: #f0f0f0;
+$maincolor4: #ffffff;
+$maincolor5: #777777;
+
+.usermessages{
+    width: 75%;
+    margin: 1rem auto;
+    display: flex;
+    // border: 1px solid $maincolor3;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+    border-radius: 1rem;
+    &_left{
+        width: 30%;
+        border-top-left-radius: 1rem;
+        border-bottom-left-radius: 1rem;
+        box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+        // background-color: $maincolor3;
+        h3{
+            border-bottom: 1px solid $maincolor3;
+            padding: 1rem 1rem;
+            cursor: pointer;
+        }
+    }
+    &_right{
+        width: 70%;
+        height: 80vh;
+        border-radius: 1rem;
+        position: relative;
+        &_name{
+            background-color: $maincolor1;
+            padding: 1rem;
+            height: 6%;
+            border-top-right-radius: 1rem;
+            h3{
+                font-weight: 600;
+                margin: 0;
+                color: $maincolor4;
+            }
+        }
+        &_messages{
+            position: absolute;
+            height: 74%;
+            overflow-y: scroll;
+            padding: 1rem 1.5rem;
+            &::-webkit-scrollbar{
+                display: none;
+            }
+            &_recruiter{
+                display: flex;
+                margin-bottom: 1rem;
+                p {
+                    background-color: $maincolor2;
+                    color: $maincolor4;
+                    margin: 0;
+                    padding: 0.5rem 1rem;
+                    border-radius: 1rem;
+                    font-size: 0.9rem;
+                }
+            }
+            &_user{
+                display: flex;
+                margin-bottom: 1rem;
+                flex-direction: row-reverse;
+                p {
+                    background-color: $maincolor1;
+                    color: $maincolor4;
+                    margin: 0;
+                    padding: 0.5rem 1rem;
+                    border-radius: 1rem;
+                    font-size: 0.9rem;
+                }
+            }
+        }
+        &_send{
+            position: absolute;
+            bottom: 0;
+            display: flex;
+            width: 100%;
+            height: 10%;
+            input {
+                font-family: "Poppins", sans-serif;
+                width: 80%;
+                padding: 1rem;
+                border-bottom-left-radius: 1rem;
+                border: none;
+                border-top: 1px solid $maincolor3;
+                outline: none;
+            }
+            button{
+                width: 20%;
+                background-color: $maincolor1;
+                border: none;
+                font-family: "Poppins", sans-serif;
+                font-size: 1rem;
+                font-weight: 500;
+                color: $maincolor4;
+                border-bottom-right-radius: 1rem;
+                cursor: pointer;
+            }
+        }
+    }
+}

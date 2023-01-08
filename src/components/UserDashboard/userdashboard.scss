@@ -1,0 +1,47 @@
+$maincolor1: #f3486a;
+$maincolor2: #271964;
+$maincolor3: #f0f0f0;
+$maincolor4: #ffffff;
+$maincolor5: #777777;
+
+.userdashboard{
+    font-family: "Poppins", sans-serif;
+    h2{
+        text-align: center;
+        margin-top: 3rem;
+        text-decoration: underline;
+        text-underline-offset: 10px;
+        margin-bottom: 4rem;
+        color: $maincolor2;
+    }
+    &_applied{
+        table{
+            margin: 2rem auto;
+            width: 80%;
+            border: 1px solid $maincolor5;
+            text-align: left;
+            border-radius: 1rem;
+            th{
+                border-bottom: 1px solid $maincolor5;
+                background-color: $maincolor1;
+                padding: 1rem;
+                color: $maincolor4;
+            }
+            th:first-child{
+                border-top-left-radius: 1rem;
+            }
+            th:last-child{
+                border-top-right-radius: 1rem;
+            }
+            td{
+                border-bottom: 1px solid $maincolor5;
+                padding: 1rem;
+                color: $maincolor2;
+                font-weight: 500;
+            }
+            tr:last-child > td{
+                border-bottom: none;
+            }
+        }
+    }
+}

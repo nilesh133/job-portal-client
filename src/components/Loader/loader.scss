@@ -1,0 +1,35 @@
+$maincolor1: #f3486a;
+$maincolor2: #271964;
+$maincolor3: #f0f0f0;
+$maincolor4: #ffffff;
+$maincolor5: #777777;
+
+
+.loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    &_circle{
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background-color: $maincolor1;
+        animation: loader_animation 2s linear infinite;
+    }
+}
+
+@keyframes loader_animation {
+    0% {
+        transform: scale(0, 0);
+        background-color: $maincolor1;
+    }
+    50% {
+        transform: scale(2.5, 2.5);
+        background-color: rgba(243, 72, 106, 0.5);
+    }
+    100% {
+        transform: scale(0, 0);
+        background-color: $maincolor1;
+    }
+}

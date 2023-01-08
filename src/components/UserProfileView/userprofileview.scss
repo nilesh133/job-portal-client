@@ -1,0 +1,235 @@
+$maincolor1: #f3486a;
+$maincolor2: #271964;
+$maincolor3: #f0f0f0;
+$maincolor4: #ffffff;
+$maincolor5: #777777;
+
+.userprofileview{
+    display: flex;
+    font-family: 'Poppins', sans-serif;
+    padding: 1rem;
+    &_left{
+        width: 55%;
+        padding: 1rem;
+        margin-right: 3rem;
+        &_avatar{
+            display: flex;
+            border-bottom: 3px solid $maincolor3;
+            padding-bottom: 2rem;
+            img{
+                width: 250px;
+                height: 250px;
+                object-fit: cover;
+                border-radius: 1rem;
+            }
+            &_details{
+                margin-left: 2rem;
+                h3{
+                    font-weight: 600;
+                    color: $maincolor2;
+                    margin: 0;
+                }
+                h4{
+                    font-weight: 600;
+                    color: $maincolor1;
+                    margin: 0;
+                }
+            }
+        }
+        &_links{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+            margin-top: 2rem;
+            border-bottom: 3px solid $maincolor3;
+            &_box{
+                display: flex;
+                align-items: center;
+                margin-bottom: 1.2rem;
+                span{
+                    font-size: 1.2rem;
+                    margin-right: 1rem;
+                }
+                h3{
+                    font-size: 1.1rem;
+                    color: $maincolor2;
+                    font-weight: 600;
+                    margin: 0;
+                }
+                h4{
+                    font-size: 0.9rem;
+                    color: $maincolor1;
+                    font-weight: 500;
+                    margin: 0;
+                }
+            }
+        }
+        &_education {
+            padding: 1rem;
+            border-bottom: 3px solid $maincolor3;
+            &_heading{
+                display: flex;
+                justify-content: space-between;
+                color: $maincolor2;
+                button {
+                    padding: 0.7rem 1rem;
+                    border-radius: 0.5rem;
+                    background-color: $maincolor1;
+                    color: $maincolor4;
+                    font-weight: 500;
+                    outline: none;
+                    margin-bottom: 1rem;
+                    font-family: "Poppins", sans-serif;
+                    margin-top: 1rem;
+                    cursor: pointer;
+                    border: none;
+                }
+            }
+            &_box{
+                &_single{
+                    display: flex;
+                    justify-content: space-between;
+                    margin: 3rem 0;
+                    &_left{
+                        display: flex;
+                        align-items: flex-start;
+                        img{
+                            width: 80px;
+                            height: 100%;
+                            object-fit: cover;
+                            margin-right: 1rem;
+                        }
+                        h2{
+                            margin: 0;
+                            font-size: 1rem;
+                            font-weight: 600;
+                            color: $maincolor2;
+    
+                        }
+                        h3{
+                            margin: 0;
+                            font-size: 0.9rem;
+                            font-weight: 500;
+                            color: $maincolor1;
+                        }
+                        h4, span{
+                            margin: 0;
+                            font-style: italic;
+                            color: $maincolor5;
+                            font-weight: 400;
+                            font-size: 0.9rem;
+                        }
+                    }
+                    &_right {
+                        background-color: $maincolor5;
+                        color: $maincolor3;
+                        border-radius: 50%;
+                        width: 30px;
+                        height: 30px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+    &_right{
+        width: 45%;
+        // border: 1px solid $maincolor1;
+        height: 80vh;
+        border-radius: 1rem;
+        position: relative;
+        box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+        &_name{
+            border-top-left-radius: 1rem;
+            border-top-right-radius: 1rem;
+            background-color: $maincolor2;
+            padding: 1rem;
+            height: 7%;
+            display: flex;
+            img {
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                object-fit: cover;
+                margin-right: 1rem;
+            }
+            &_status{
+                h3{
+                    font-weight: 500;
+                    margin: 0;
+                    color: $maincolor4;
+                    font-size: 1rem;
+                }
+                p{
+                    margin: 0;
+                    color: $maincolor3;
+                    font-size: 0.8rem;
+                    font-weight: 600;
+                }
+            }
+        }
+        &_messages{
+            height: 74%;
+            overflow-y: scroll;
+            padding: 1rem 1.5rem;
+            &::-webkit-scrollbar{
+                display: none;
+            }
+            &_user{
+                display: flex;
+                margin-bottom: 1rem;
+                p {
+                    background-color: $maincolor2;
+                    color: $maincolor4;
+                    margin: 0;
+                    padding: 0.5rem 1rem;
+                    border-radius: 1rem;
+                    font-size: 0.9rem;
+                }
+            }
+            &_recruiter{
+                display: flex;
+                margin-bottom: 1rem;
+                flex-direction: row-reverse;
+                p {
+                    background-color: $maincolor1;
+                    color: $maincolor4;
+                    margin: 0;
+                    padding: 0.5rem 1rem;
+                    border-radius: 1rem;
+                    font-size: 0.9rem;
+                }
+            }
+        }
+        &_send{
+            position: absolute;
+            bottom: 0;
+            display: flex;
+            width: 100%;
+            height: 10%;
+            input {
+                font-family: "Poppins", sans-serif;
+                width: 80%;
+                padding: 1rem;
+                border-bottom-left-radius: 1rem;
+                border: none;
+                border-top: 1px solid $maincolor3;
+                outline: none;
+            }
+            button{
+                width: 20%;
+                background-color: $maincolor1;
+                border: none;
+                font-family: "Poppins", sans-serif;
+                font-size: 1rem;
+                font-weight: 500;
+                color: $maincolor4;
+                border-bottom-right-radius: 1rem;
+                cursor: pointer;
+            }
+        }
+    }
+}
