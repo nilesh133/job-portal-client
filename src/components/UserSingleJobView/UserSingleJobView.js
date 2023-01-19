@@ -19,6 +19,8 @@ import { ImLocation } from "react-icons/im";
 import { toast, ToastContainer } from 'react-toastify';
 import "react-toastify/dist/ReactToastify.css";
 import Loader from '../Loader/Loader';
+import { RiBuilding2Fill } from 'react-icons/ri';
+import { FaRupeeSign } from 'react-icons/fa';
 
 const UserSingleJobView = () => {
     const dispatch = useDispatch();
@@ -101,23 +103,23 @@ const UserSingleJobView = () => {
                 <div className='usersinglejob_details'>
                     <div className='usersinglejob_details_left'>
                         <div className='usersinglejob_details_left_logo'>
-                            <img src={company_logo} />
+                            <img src={userSingleJob.recruiter_logo} />
                             <div className='usersinglejob_details_left_logo_info'>
                                 <h4>{userSingleJob.jobprofile}</h4>
-                                <div>
-                                    <p><span><HiOfficeBuilding /></span>{userSingleJob.companyname}</p>
+                                <div style={{flexDirection: "column"}}>
+                                    <p><span style={{fontSize: "1.2rem"}}><RiBuilding2Fill /></span>{userSingleJob.companyname}</p>
                                     <p><span><ImLocation /></span>{userSingleJob.location}</p>
-                                    <p><span><HiCurrencyRupee /></span>{userSingleJob.minsalary} - {userSingleJob.maxsalary}</p>
+                                    <p><span><FaRupeeSign /></span>{userSingleJob.minsalary} - {userSingleJob.maxsalary} LPA</p>
                                 </div>
                             </div>
                         </div>
                         <div className='usersinglejob_details_left_desc'>
                             <h3>About company</h3>
-                            <p>{userSingleJob.aboutcompany}</p>
+                            <p>{userSingleJob.aboutCompany}</p>
                         </div>
                         <div className='usersinglejob_details_left_desc'>
                             <h3>Job description</h3>
-                            <p>{userSingleJob.aboutcompany}</p>
+                            <p>{userSingleJob.jobdescription}</p>
                         </div>
                         <div className='usersinglejob_details_left_desc'>
                             <h3>Key responsibilities</h3>

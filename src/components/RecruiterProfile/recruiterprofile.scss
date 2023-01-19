@@ -1,0 +1,162 @@
+$maincolor1: #f3486a;
+$maincolor2: #271964;
+$maincolor3: #f0f0f0;
+$maincolor4: #ffffff;
+$maincolor5: #d3d3d3;
+
+.recruiterprofile {
+    padding: 1rem;
+    &_logo {
+        font-family: "Poppins", sans-serif;
+        margin-bottom: 3rem;
+        &_image {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            img {
+                width: 200px;
+                height: 200px;
+                object-fit: cover;
+                border-radius: 50%;
+            }
+            &_button{
+                position: absolute;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                top: 70%;
+                left: 90%;
+                width: 15px;
+                height: 15px;
+                border-radius: 50%;
+                background-color: $maincolor1;
+                padding: 0.7rem;
+                border: 2px solid $maincolor4;
+                cursor: pointer;
+                span {
+                    font-size: 1.3rem;
+                    margin-top: 0.3rem;
+                    color: $maincolor3;
+                }
+            }
+            h3 {
+                margin: 0;
+                color: $maincolor2;
+            }
+        }
+        &_modal {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            &_img {
+                width: 180px;
+                height: 180px;
+                object-fit: cover;
+                margin: 0.5rem 0;
+                border-radius: 50%;
+            }
+            &_button {
+                padding: 0.7rem 1rem;
+                border-radius: 0.5rem;
+                background-color: $maincolor1;
+                color: $maincolor3;
+                font-weight: 500;
+                outline: none;
+                margin-bottom: 1rem;
+                font-family: "Poppins", sans-serif;
+                margin-top: 1rem;
+                cursor: pointer;
+                border: none;
+                margin-right: 1rem;
+            }
+        }
+    }
+    &_joined {
+        margin-bottom: 3rem;
+        font-family: "Poppins", sans-serif;
+        h3 {
+            margin: 0;
+            color: $maincolor2;
+            font-size: 1rem;
+        }
+        p {
+            font-size: 0.9rem;
+            margin: 0;
+            margin-top: 0.3rem;
+        }
+    }
+    &_about {
+        &_heading {
+            display: flex;
+            align-items: center;
+            font-family: "Poppins", sans-serif;
+            h3 {
+                margin: 0;
+                color: $maincolor2;
+                font-size: 1rem;
+            }
+            button {
+                padding: 0.7rem 1rem;
+                border-radius: 0.5rem;
+                background-color: $maincolor1;
+                color: $maincolor3;
+                font-weight: 500;
+                outline: none;
+                margin-bottom: 1rem;
+                font-family: "Poppins", sans-serif;
+                margin-top: 1rem;
+                cursor: pointer;
+                border: none;
+                margin-left: 1rem;
+            }
+
+        }
+        p {
+            font-size: 0.9rem;
+            margin: 0;
+            margin-top: 0.3rem;
+            width: 60%;
+        }
+        &_modal {
+            position: relative;
+            textarea {
+                width: 100%;
+                height: 220px;
+                font-family: "Poppins", sans-serif;
+                border-radius: 1rem;
+                padding: 1rem;
+                outline: none;
+                border: 2px solid $maincolor5;
+                transition: all 0.5s;
+                box-sizing: border-box;
+                &:focus {
+                    border: 2px solid $maincolor1;
+                }
+            }
+            button {
+                padding: 0.7rem 1rem;
+                border-radius: 0.5rem;
+                background-color: $maincolor1;
+                color: $maincolor3;
+                font-weight: 500;
+                outline: none;
+                margin-bottom: 1rem;
+                font-family: "Poppins", sans-serif;
+                margin-top: 1rem;
+                cursor: pointer;
+                border: none;
+                margin-right: 1rem;
+            }
+            &_closebutton{
+                position: absolute;
+                top: 65%;
+                left: 70%;
+            }
+            &_savebutton{
+                position: absolute;
+                top: 65%;
+                left: 85%;
+            }
+        }
+    }
+}

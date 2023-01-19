@@ -10,6 +10,8 @@ import "./useralljobs.scss"
 
 // Icons import
 import { HiOfficeBuilding, HiCurrencyRupee } from "react-icons/hi";
+import {FaRupeeSign} from "react-icons/fa";
+import {RiBuilding2Fill} from "react-icons/ri"
 import { ImLocation } from "react-icons/im";
 import Loader from '../Loader/Loader';
 
@@ -129,13 +131,15 @@ const UserAllJobs = () => {
                                 <div className='useralljobs_jobs_box'>
                                     {/* {console.log(appliedArr)} */}
                                     <div className='useralljobs_jobs_box_left'>
-                                        <img src={images[i % images.length]} />
+                                        <img src={job.recruiter_logo} />
                                         <div>
                                             <h3>{job.jobprofile}</h3>
                                             <h4>Premium Labels Limited</h4>
-                                            <span><ImLocation />{job.location}</span>
-                                            <span><HiCurrencyRupee />{job.minsalary} - {job.maxsalary}</span>
-                                            <span><HiOfficeBuilding />{job.jobtype}</span>
+                                            <div className='useralljobs_jobs_box_left_details'>
+                                                <p><span>Location </span>{job.location}</p>
+                                                <p><span>Salary </span>{job.minsalary} - {job.maxsalary} LPA</p>
+                                                <p><span>Type </span>{job.jobtype}</p>
+                                            </div>
                                             {/* <p>Location: <span>{job.location}</span></p>
                                     <p>Salary: <span>{job.minsalary} - {job.maxsalary}LPA</span></p>
                                     <p>Job type: <span>{job.jobtype}</span></p> */}

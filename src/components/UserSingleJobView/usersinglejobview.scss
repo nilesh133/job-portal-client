@@ -49,12 +49,16 @@ $maincolor5: #777777;
                         display: flex;
                         margin-top: 0.3rem;
                         p{
+                            display: flex;
+                            align-items: center;
                             color: $maincolor1;
                             margin: 0;
                             margin-right: 3rem;
                             span {
                                 color: $maincolor1;
                                 font-size: 1em;
+                                margin-top: 0.3rem;
+                                margin-right: 0.2rem;
                             }
                         }
                     }

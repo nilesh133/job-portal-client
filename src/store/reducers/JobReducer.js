@@ -29,12 +29,12 @@ const jobSlice = createSlice({
         setUserProfileViewData: (state, action) => {
             state.userProfileViewData = action.payload
         },
-        // setJobPostMessage: (state, action) => {
-        //     state.jobPostMessage = action.payload
-        // },
-        // setJobPostErrors: (state, action) => {
-        //     state.jobPostErrors = action.payload
-        // }
+        setJobPostMessage: (state, action) => {
+            state.jobPostMessage = action.payload
+        },
+        setJobPostErrors: (state, action) => {
+            state.jobPostErrors = action.payload
+        }
     }
 })
 

@@ -2,6 +2,7 @@ $maincolor1: #f3486a;
 $maincolor2: #271964;
 $maincolor3: #f0f0f0;
 $maincolor4: #ffffff;
+$maincolor5: #777777;
 
 .useralljobs{
     width: 70%;
@@ -90,21 +91,42 @@ $maincolor4: #ffffff;
                     font-weight: 300;
                     margin-bottom: 0.5rem;
                 }
-                span{
-                    font-size: 0.9rem;
-                    font-weight: 600;
-                    margin-right: 4rem;
-                    color: $maincolor1;    
-                }
-                p{
-                    margin: 0;
-                    span{
+                &_details {
+                    display: flex;
+                    justify-content: space-between;
+                    p {
                         font-size: 0.9rem;
                         font-weight: 600;
-                        margin-right: 2rem;
-                        color: $maincolor4;    
+                        color: $maincolor5;
+                        padding: 0.4rem 1rem;
+                        border: 1px solid $maincolor1;
+                        border-radius: 1rem;
+                        span {
+                            color: $maincolor1;
+                            font-size: 0.9rem;
+                            margin-right: 0.4rem;
+                            border-right: 1px solid $maincolor1;
+                        }
+                    }
+                    p:nth-child(1), p:nth-child(2){
+                        margin-right: 3rem;
                     }
                 }
+                // span{
+                //     font-size: 0.9rem;
+                //     font-weight: 600;
+                //     margin-right: 4rem;
+                //     color: $maincolor1;    
+                // }
+                // p{
+                //     margin: 0;
+                //     span{
+                //         font-size: 0.9rem;
+                //         font-weight: 600;
+                //         margin-right: 2rem;
+                //         color: $maincolor4;    
+                //     }
+                // }
                 
             }
             &_right{

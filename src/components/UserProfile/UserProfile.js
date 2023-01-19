@@ -29,6 +29,7 @@ import Loader from '../Loader/Loader';
 const UserProfile = () => {
   const dispatch = useDispatch()
   const { user: { name, _id, email, headline, phone, dob, githublink, linkedinlink, userPhotoUrl, education, experience }, loading } = useSelector(state => state.auth)
+  const { user } = useSelector(state => state.auth)
 
   const [profile, setProfile] = useState({
     id: _id,
@@ -117,6 +118,7 @@ const UserProfile = () => {
   const saveEducation = () => {
     console.log(profile)
     dispatch(UpdateUserProfileAction(profile))
+    handleCloseModal()
   }
 
 
@@ -152,6 +154,7 @@ const UserProfile = () => {
 
   const saveExperience = () => {
     dispatch(UpdateUserProfileAction(profile))
+    handleCloseModal()
   }
 
   // User Profile photo handler
@@ -183,6 +186,7 @@ const UserProfile = () => {
         }))
       });
     })
+    handleCloseModal();
   }
 
   return (
@@ -197,7 +201,7 @@ const UserProfile = () => {
         {/* User Profile Photo */}
         <div className='userprofile_profilephoto'>
           <div className='userprofile_profilephoto_image'>
-            <img src={profile.userPhotoUrl} />
+            <img src={user.userPhotoUrl} />
             <div className="userprofile_profilephoto_image_button" onClick={() => handleOpenModal("userPhotoUrl")}><span><IoMdCamera /></span></div>
           </div>
           <Modal
@@ -208,10 +212,15 @@ const UserProfile = () => {
             aria-describedby="child-modal-description"
           >
             <Box sx={{ ...style, width: 300, height: 300 }}>
-              <img style={{ width: "150px", height: '150px', objectFit: "cover", borderRadius: "50%" }} src={userPhotoPreview ? userPhotoPreview : profile.userPhotoUrl} />
-              <input type="file" onChange={(e) => handleProfilePhotoChange(e)} />
-              <Button onClick={handleCloseModal}>Close Child Modal</Button>
-              <Button onClick={updateUserPhoto}>Update</Button>
+              <div className='userprofile_profilephoto_modal'>
+                <img className='userprofile_profilephoto_modal_img' src={userPhotoPreview ? userPhotoPreview : user.userPhotoUrl} />
+                <input type="file" onChange={(e) => handleProfilePhotoChange(e)} />
+                <div>
+                  <button className='userprofile_profilephoto_modal_button' onClick={handleCloseModal}>Close</button>
+                  <button className='userprofile_profilephoto_modal_button' onClick={updateUserPhoto}>Save</button>
+                </div>
+              </div>
+
             </Box>
           </Modal>
         </div>

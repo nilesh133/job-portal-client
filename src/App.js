@@ -11,6 +11,7 @@ import UserLogin from './components/Login/UserLogin';
 import Navbar from './components/Navbar/Navbar';
 import RecruiterAuth from './components/RecruiterAuth/RecruiterAuth';
 import RecruiterDashboard from './components/RecruiterDashboard/RecruiterDashboard';
+import RecruiterProfile from './components/RecruiterProfile/RecruiterProfile';
 import RecruiterRegister from './components/Register/RecruiterRegister';
 import UserRegister from './components/Register/UserRegister';
 import UserAllJobs from './components/UserAllJobs/UserAllJobs';
@@ -99,6 +100,11 @@ const App = () => {
             <UserPrivateRoute>
               <UserMessages />
             </UserPrivateRoute>
+          } />
+          <Route path="/recruiter-profile" element={
+            <RecruiterPrivateRoute>
+              <RecruiterProfile />
+            </RecruiterPrivateRoute>
           } />
         </Routes>
       </Router>

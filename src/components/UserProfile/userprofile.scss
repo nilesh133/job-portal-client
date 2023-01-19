@@ -55,6 +55,32 @@ $maincolor5: #777777;
                 }
             }
         }
+        &_modal {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            &_img {
+                width: 180px;
+                height: 180px;
+                object-fit: cover;
+                margin: 0.5rem 0;
+                border-radius: 50%;
+            }
+            &_button {
+                padding: 0.7rem 1rem;
+                border-radius: 0.5rem;
+                background-color: $maincolor1;
+                color: $maincolor3;
+                font-weight: 500;
+                outline: none;
+                margin-bottom: 1rem;
+                font-family: "Poppins", sans-serif;
+                margin-top: 1rem;
+                cursor: pointer;
+                border: none;
+                margin-right: 1rem;
+            }
+        }
     }
 
     &_briefinfo {

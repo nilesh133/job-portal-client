@@ -16,14 +16,16 @@ export const JobPostAction = (state) => {
         };
         try{
             dispatch(setLoadingTrue());
-            const {data} = await axios.post("https://job-portal-server-nilesh133.vercel.app/job-post", state, config);
+            const {data} = await axios.post("/job-post", state, config);
+            localStorage.setItem('myToken', data.token);
+            dispatch(setToken(data.token));
             dispatch(setRedirectTrue());
             dispatch(setMessage(data.msg))
             dispatch(setLoadingFalse());
         }
         catch(err){
             dispatch(setJobPostErrors(err.response.data.errors))
-            // console.log(err.response.data);
+            console.log(err.response.data);
         }
     }
 }
@@ -131,6 +133,7 @@ export const UserJobApplyAction = (state) => {
             dispatch(setRedirectTrue());
             dispatch(setToken(data.token));
             dispatch(setUserSingleJob(data.updatedJob));
+            dispatch(setMessage(data.msg))
             dispatch(setLoadingFalse());
             
         } catch (error) {

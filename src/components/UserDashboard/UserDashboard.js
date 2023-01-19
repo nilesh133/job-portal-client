@@ -56,7 +56,7 @@ const UserDashboard = () => {
                 <h2>Your applications</h2>
                 <div className='userdashboard_applied'>
                     {
-                        user.appliedCompany.length > 0 ? (
+                        user?.appliedCompany?.length > 0 ? (
                             <table>
                                 <tr>
                                     <th>COMPANY NAME</th>
@@ -71,7 +71,7 @@ const UserDashboard = () => {
                                             <td>{company.companyname}</td>
                                             <td>{company.jobprofile}</td>
                                             <td>{company.noofapplicants}</td>
-                                            <td>{company.viewStatus ? "Viewed" : "Applied"}</td>
+                                            <td style={{color: company.viewStatus ? "#32cd32" : "#271964"}}>{company.viewStatus ? "Viewed" : "Applied"}</td>
                                             {
                                                 company.appliedAt ? <td>{moment(company.appliedAt).format('ll')}</td> : "None"
                                             }

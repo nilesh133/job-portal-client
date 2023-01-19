@@ -64,14 +64,14 @@ const RecruiterDashboard = () => {
             <h3>Total jobs posted</h3>
             <h4>{recruiterJobs.length}</h4>
           </div>
-          <div className='recruiter_dashboard_analytics_box'>
+          {/* <div className='recruiter_dashboard_analytics_box'>
             <h3>Total jobs posted</h3>
             <h4>81</h4>
           </div>
           <div className='recruiter_dashboard_analytics_box'>
             <h3>Total jobs posted</h3>
             <h4>23</h4>
-          </div>
+          </div> */}
         </div>
 
         <div className='recruiter_dashboard_jobs'>
@@ -83,7 +83,7 @@ const RecruiterDashboard = () => {
                 <p><span>Experience</span> : {job.minexperience} - {job.maxexperience} years</p>
                 <p><span>Salary</span> : {job.minsalary} - {job.maxsalary} LPA</p>
                 <div className='recruiter_dashboard_jobs_box_button'>
-                  <p><span>Posted on</span> : {moment(job.createdAt).add(10, 'days').calendar()}</p>
+                  <p><span>Posted on</span> : {moment(job.createdAt).add(0, 'days').calendar()}</p>
                   <Link to={`/jobs-${job.companyname}-${job.jobprofile}-${job._id}-${job.recruiter_id}-candidates`}><button>View all candidates</button></Link>
                 </div>
               </div>

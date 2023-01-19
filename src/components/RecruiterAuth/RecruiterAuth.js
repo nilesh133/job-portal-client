@@ -123,7 +123,7 @@ const RecruiterAuth = () => {
                             <input
                                 type="text"
                                 name="name"
-                                placeholder='Name'
+                                placeholder='Enter company name'
                                 value={recruiterRegister.name}
                                 onChange={(e) => handleRecruiterRegister(e)}
                             />
@@ -134,7 +134,7 @@ const RecruiterAuth = () => {
                             <input
                                 type="email"
                                 name="email"
-                                placeholder='Email'
+                                placeholder='Enter company email'
                                 value={recruiterRegister.email}
                                 onChange={(e) => handleRecruiterRegister(e)}
                             />
@@ -145,7 +145,7 @@ const RecruiterAuth = () => {
                             <input
                                 type="password"
                                 name="password"
-                                placeholder='Password'
+                                placeholder='Enter password'
                                 value={recruiterRegister.password}
                                 onChange={(e) => handleRecruiterRegister(e)}
                             />

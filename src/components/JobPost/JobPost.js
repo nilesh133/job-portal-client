@@ -28,7 +28,7 @@ const JobPost = () => {
             navigate("/recruiter-dashboard");
         }
         if (jobPostErrors?.length > 0) {
-            jobPostErrors.map((error) => {
+            jobPostErrors?.map((error) => {
                 // console.log(error.msg)
                 toast.error(error.msg);
             })
@@ -37,12 +37,14 @@ const JobPost = () => {
 
     const [jobDetails, setJobDetails] = useState({
         recruiter_id: user._id,
+        recruiter_logo: user.companyLogo,
         companyname: user.name,
         jobprofile: '',
         jobtype: '',
         minsalary: '',
         maxsalary: '',
-        aboutcompany: '',
+        aboutCompany: user.aboutCompany,
+        jobdescription: '',
         minexperience: '',
         maxexperience: '',
         location: '',
@@ -130,7 +132,13 @@ const JobPost = () => {
                 </div>
 
                 <div className='jobpost_inputcontainer'>
-                    <h4>Salary</h4>
+                    <h4>About company</h4>
+                    <textarea name = "aboutCompany" rows="6" value={jobDetails.aboutCompany} onChange={(e) => handleJobDetailsChange(e)} placeholder='Write something about your company'></textarea>
+                    {/* <textarea rows="6" placeholder='Write something about your company' name="aboutcompany" onChange={(e) => handleJobDetailsChange(e)}></textarea> */}
+                </div>
+
+                <div className='jobpost_inputcontainer'>
+                    <h4>Salary (LPA)</h4>
                     <div className='jobpost_halfinputcontainer'>
                         <div>
                             <h4>Min</h4>
@@ -138,18 +146,13 @@ const JobPost = () => {
                         </div>
                         <div>
                             <h4>Max</h4>
-                            <input type="number" name="maxsalary" placeholder='Enter max profile' onChange={(e) => handleJobDetailsChange(e)} />
+                            <input type="number" name="maxsalary" placeholder='Enter max salary' onChange={(e) => handleJobDetailsChange(e)} />
                         </div>
                     </div>
                 </div>
 
                 <div className='jobpost_inputcontainer'>
-                    <h4>About company</h4>
-                    <textarea rows="6" placeholder='Write something about your company' name="aboutcompany" onChange={(e) => handleJobDetailsChange(e)}></textarea>
-                </div>
-
-                <div className='jobpost_inputcontainer'>
-                    <h4>Experience</h4>
+                    <h4>Experience (Years)</h4>
                     <div className='jobpost_halfinputcontainer'>
                         <div>
                             <h4>Min</h4>
@@ -160,6 +163,12 @@ const JobPost = () => {
                             <input type="number" name="maxexperience" onChange={(e) => handleJobDetailsChange(e)} placeholder="Enter max required exprience" />
                         </div>
                     </div>
+                </div>
+
+                <div className='jobpost_inputcontainer'>
+                    <h4>Job description</h4>
+                    <textarea name = "jobdescription" rows="6" value={jobDetails.jobdescription} onChange={(e) => handleJobDetailsChange(e)} placeholder='Write something about your company'></textarea>
+                    {/* <textarea rows="6" placeholder='Write something about your company' name="aboutcompany" onChange={(e) => handleJobDetailsChange(e)}></textarea> */}
                 </div>
 
                 <div className='jobpost_inputcontainer'>

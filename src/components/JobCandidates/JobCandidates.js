@@ -57,7 +57,7 @@ const JobCandidates = () => {
                     </div>
                     <div className='jobcandidates_jobdetails_box'>
                         <h4>Posted on</h4>
-                        <h3>{moment(recruiterSingleJob.updatedAt).add(10, 'days').calendar()}</h3>
+                        <h3>{moment(recruiterSingleJob.updatedAt).add(0, 'days').calendar()}</h3>
                     </div>
                 </div>
                 <div className='jobcandidates_list'>
