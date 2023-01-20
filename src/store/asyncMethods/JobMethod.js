@@ -16,7 +16,7 @@ export const JobPostAction = (state) => {
         };
         try{
             dispatch(setLoadingTrue());
-            const {data} = await axios.post("/job-post", state, config);
+            const {data} = await axios.post("https://job-portal-server-nilesh133.vercel.app/job-post", state, config);
             localStorage.setItem('myToken', data.token);
             dispatch(setToken(data.token));
             dispatch(setRedirectTrue());
