@@ -18,7 +18,7 @@ import moment from "moment";
 const RecruiterProfile = () => {
     const dispatch = useDispatch();
     const { user } = useSelector(state => state.auth);
-    console.log(user)
+    // console.log(user)
 
     const [recruiterPhotoName, setRecruiterPhotoName] = useState('');
     const [recruiterPhotoPreview, setRecruiterPhotoPreview] = useState('');
