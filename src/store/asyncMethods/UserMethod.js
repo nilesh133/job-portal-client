@@ -30,7 +30,7 @@ export const UpdateRecruiterLogoAction = (state) => {
             },
         };
         try{
-            const {data} = await axios.post("/update-recruiter-logo", state, config);
+            const {data} = await axios.post("https://job-portal-server-nilesh133.vercel.app/update-recruiter-logo", state, config);
             localStorage.setItem('myToken', data.token);
             dispatch(setToken(data.token));
         }
@@ -49,7 +49,7 @@ export const UpdateRecruiterAboutAction = (state) => {
             },
         };
         try{
-            const {data} = await axios.post("/update-recruiter-about", state, config);
+            const {data} = await axios.post("https://job-portal-server-nilesh133.vercel.app/update-recruiter-about", state, config);
             localStorage.setItem('myToken', data.token);
             dispatch(setToken(data.token));
         }
